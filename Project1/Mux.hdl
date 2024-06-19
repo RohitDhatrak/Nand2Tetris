@@ -13,27 +13,6 @@ CHIP Mux {
 
     PARTS:
     //// Replace this comment with your code.
-    //Not(in=a , out=notA);
-    //Not(in=b , out=notB);
-    //Not(in=sel , out=notSel);
-
-    //And(a=a, b=notB, out=andANotB);
-    //And(a=andANotB, b=notSel, out=part1);
-
-    //And(a=a, b=b, out=andAB);
-    //And(a=andAB, b=notSel, out=part2);
-
-    //And(a=notA, b=b, out=andNotAB);
-    //And(a=andNotAB, b=sel, out=part3);
-
-    //And(a=andAB, b=sel, out=part4);
-
-    //Or(a=part1, b=part2, out=orP1P2);
-    //Or(a=part3, b=part4, out=orP3P4);
-
-    //Or(a=orP1P2, b=orP3P4, out=out);
-
-    // Optimal
     Not(in=sel, out=notsel);
     And(a=notsel, b=a, out=ares);
     And(a=sel, b=b, out=bres);
